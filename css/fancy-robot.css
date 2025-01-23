@@ -21,6 +21,18 @@
   height: 40px;
   border-radius: 10px;
   background: rgba(133, 0, 104, 0.5);
+  animation: left-eye 1s linear infinite alternate;
+}
+
+@keyframes left-eye {
+  0% {
+    left: 30%;
+    top: 20%;
+  }
+
+  100% {
+    top: 15%;
+  }
 }
 
 .robot-eye-right {
@@ -31,6 +43,33 @@
   height: 2rem;
   border-radius: 30px;
   background: green;
+  animation: right-eye 5s ease-in-out infinite;
+}
+
+@keyframes right-eye {
+  0% {
+    top: 25%;
+    right: 30%;
+    background-color: green;
+  }
+  25% {
+    right: 10%;
+    background-color: rgb(1, 185, 1);
+  }
+  50% {
+    top: 10%;
+    right: 30%;
+    background-color: rgb(0, 236, 0);
+  }
+  75% {
+    right: 10%;
+    background-color: rgb(1, 185, 1);
+  }
+  100% {
+    top: 25%;
+    right: 30%;
+    background-color: green;
+  }
 }
 
 .robot-ear-left {
@@ -42,6 +81,17 @@
   border: 1px solid blue;
   border-radius: 48px 180px 52px 200px;
   background-color: rgb(59, 244, 250);
+  animation: left-ear 1s ease-in-out infinite alternate;
+}
+
+@keyframes left-ear {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
 }
 
 .robot-ear-right {
@@ -53,6 +103,17 @@
   border: 1px solid blue;
   border-radius: 48px 180px 52px 200px;
   background-color: rgb(59, 244, 250);
+  animation: right-ear 1s ease-in-out infinite alternate;
+}
+
+@keyframes right-ear {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-90deg);
+  }
 }
 
 .robot-nose {
@@ -63,6 +124,10 @@
   height: 20px;
   border: solid black 1px;
   background: dodgerblue;
+  transition: all 2s ease-in-out 500ms;
+}
+.robot-nose:hover {
+  transform: scale(3);
 }
 
 .robot-teeth {
@@ -76,6 +141,17 @@
   height: 50px;
   background: rgb(121, 117, 117);
   padding: 10px;
+  animation: teeth 5s ease-out infinite alternate;
+}
+
+@keyframes teeth {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 .robot-tooth {
@@ -97,6 +173,16 @@
   height: 100px;
   align-items: flex-end;
   justify-content: center;
+  animation: hair 4s ease-in-out infinite alternate;
+}
+
+@keyframes hair {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0.7;
+  }
 }
 
 .robot-hair-one {
